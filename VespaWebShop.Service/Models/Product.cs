@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace VespaWebShop.Service.Models
     public class Product
     {
 
-        public long ProductId { get; set; }
+        public long Id { get; set; }
 
         public string ProductNumber { get; set; }
 
@@ -26,6 +27,7 @@ namespace VespaWebShop.Service.Models
         public IList<Image> Images { get; set; }
 
         public long CategoryId { get; set; }
+        [ForeignKey("CategoryId")]
         public Category Category { get; set; }
     }
 }

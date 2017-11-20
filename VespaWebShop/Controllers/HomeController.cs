@@ -12,6 +12,8 @@ namespace VespaWebShop.Controllers
     {
         public ActionResult Index()
         {
+            var con = new ServiceContext();
+            con.Categories.ToList();
             return View();
         }
 

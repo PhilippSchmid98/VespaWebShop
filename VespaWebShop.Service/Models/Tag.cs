@@ -8,7 +8,7 @@ namespace VespaWebShop.Service.Models
 {
     public class Tag
     {
-        public long TagId { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
     }
 }

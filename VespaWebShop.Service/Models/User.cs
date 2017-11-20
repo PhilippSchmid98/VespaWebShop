@@ -9,7 +9,7 @@ namespace VespaWebShop.Service.Models
     public class User
     {
 
-        public long UserId { get; set; }
+        public long Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Street { get; set; }

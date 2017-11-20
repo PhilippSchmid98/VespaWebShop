@@ -5,9 +5,7 @@ c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\Vespa
 c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\bin\Debug\EntityFramework.SqlServer.dll
 c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\bin\Debug\EntityFramework.xml
 c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\bin\Debug\EntityFramework.SqlServer.xml
-c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.csprojResolveAssemblyReference.cache
 c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.dll
 c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.pdb
-c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.Migrations.InitialCreate.resources
-c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.csproj.GenerateResource.Cache
-c:\users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.Migrations.Firstmigration.resources
+C:\Users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.Migrations.initial.resources
+C:\Users\phili\persoenlichedokumente\documents\visual studio 2015\Projects\VespaWebShop\VespaWebShop.Service\obj\Debug\VespaWebShop.Service.csproj.GenerateResource.Cache

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace VespaWebShop.Service.Models
 {
-    class Basket
+    public class Basket
     {
 
-        public long BasketId { get; set; }
+        public long Id { get; set; }
 
         public long UserId { get; set; }
         public User User { get; set; }
 
-        public OrderedProduct OrderedProduct { get; set; }
+        public IList<OrderedProduct> OrderedProduct { get; set; }
     }
 }

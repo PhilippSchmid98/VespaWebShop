@@ -8,7 +8,7 @@ namespace VespaWebShop.Service.Models
 {
     public class Image
     {
-        public long ImageId { get; set; }
+        public long Id { get; set; }
         public byte[] Binary { get; set; }
     }
 }

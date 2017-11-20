@@ -4,42 +4,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Anwendungsname", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Info", "About", "Home")</li>
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+<div id="wrapper">
+    <div id="sidebar-wrapper">
+        <div id="top-sidebar-wrapper">
+            <img src="~/Graphics/close.png" id="CloseNav"/>
         </div>
+        <ul class="sidebar-nav">
+            <li>@Html.ActionLink("Bremsen", "Index", "Home")</li>
+            <li>@Html.ActionLink("Elektrik", "Index", "Home")</li>
+            <li>@Html.ActionLink("Getriebe", "Index", "Home")</li>
+            <li>@Html.ActionLink("Kupplung", "Index", "Home")</li>
+            <li>@Html.ActionLink("Rahmen", "Index", "Home")</li>
+            <li>@Html.ActionLink("Scheinwerffer", "Index", "Home")</li>
+            <li>@Html.ActionLink("Seilzüge", "Index", "Home")</li>
+            <li>@Html.ActionLink("Stossdämpfer", "Index", "Home")</li>
+            <li>@Html.ActionLink("Vergaser", "Index", "Home")</li>
+            <li>@Html.ActionLink("Zündung", "Index", "Home")</li>
+            <li>@Html.ActionLink("Zylinder", "Index", "Home")</li>
+        </ul>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
-        </footer>
-    </div>
+    <div class="header-wrapper">
 
-    @Scripts.Render("~/bundles/jquery")
+    </div>
+    <div id="page-content-wrapper" class="body-content">
+        
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Vespa WebShop</p>
+            </footer>
+    </div>
+    
+</div>
+
+                
+            
+    
+    @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("scripts", required: false)*@
+    <script>
+    $('#CloseNav').click(function (e) {
+        $('#sidebar-wrapper').animate({ "left": "-250px" }, 300);
+    });
+    </script>
 </body>
+
+
+
 </html>

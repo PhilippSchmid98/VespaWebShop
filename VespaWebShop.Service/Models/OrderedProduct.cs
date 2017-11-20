@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace VespaWebShop.Service.Models
 {
-    class OrderedProduct
+    public class OrderedProduct
     {
+        public long Id { get; set; }
+
         public long OrderedProdcutId { get; set; }
 
         public long ProductId { get; set; }
