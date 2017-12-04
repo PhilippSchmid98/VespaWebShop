@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VespaWebShop.Models;
 using VespaWebShop.Service;
 using VespaWebShop.Service.Models;
 
@@ -12,10 +13,22 @@ namespace VespaWebShop.Controllers
     {
         public ActionResult Index()
         {
-            var con = new ServiceContext();
-            con.Categories.ToList();
+
             return View();
         }
+
+        public ActionResult Login()
+        {
+            var userVM = new LoginViewModel();
+
+            return null;
+        }
+        public ActionResult UserSettings()
+        {
+            return null;
+        }
+
+
 
         public ActionResult About()
         {

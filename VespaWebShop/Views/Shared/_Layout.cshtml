@@ -14,7 +14,7 @@
 <div id="wrapper">
     <div id="sidebar-wrapper">
         <div id="top-sidebar-wrapper">
-            <img src="~/Graphics/close.png" id="CloseNav"/>
+            <img src="~/Graphics/navIcon.png" id="CloseNav"/>
         </div>
         <ul class="sidebar-nav">
             <li>@Html.ActionLink("Bremsen", "Index", "Home")</li>
@@ -30,7 +30,23 @@
             <li>@Html.ActionLink("Zylinder", "Index", "Home")</li>
         </ul>
     </div>
+    <div id="content_blocker"></div>
     <div class="header-wrapper">
+        
+            <h1>Maurizi Vespa Shop</h1>
+        <img src="~/Graphics/navIcon.png" id="OpenNav" />
+
+
+        @if (Session["UserName"] == null)
+        {
+            @Html.ActionLink("Login", "Login", "Home", new { id = "login" })
+        }
+        else
+        {
+            @Html.ActionLink(Session["UserName"].ToString(), "UserSettings", "Home", new { id = "login" })
+        }
+
+
 
     </div>
     <div id="page-content-wrapper" class="body-content">
@@ -53,7 +69,31 @@
     <script>
     $('#CloseNav').click(function (e) {
         $('#sidebar-wrapper').animate({ "left": "-250px" }, 300);
+        _blockContent(false)
     });
+    $('#OpenNav').click(function (e) {
+        $('#sidebar-wrapper').animate({ "left": "0px" }, 300);
+        _blockContent(true);
+    });
+    $('#content_blocker').click(function (e) {
+        $('#sidebar-wrapper').animate({ "left": "-250px" }, 300);
+        _blockContent(false);
+    });
+
+    var _blockContent = function (block) {
+        if (block) {
+            $('#content_blocker').addClass("expand");
+            $('#content_blocker').animate({ "opacity": "0.3" }, 300);
+        }
+        else {
+            $('#content_blocker').animate({ "opacity": "0.0" }, 300);
+            $('#content_blocker').removeClass("expand");
+            
+        }
+        
+    }
+    
+    
     </script>
 </body>
 
