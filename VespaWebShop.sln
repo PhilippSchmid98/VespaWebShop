@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VespaWebShop.Web", "VespaWe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VespaWebShop.Service", "VespaWebShop.Service\VespaWebShop.Service.csproj", "{EEFC0F4D-06A7-4D71-910D-AC2305201823}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VespaWebShop.Engine", "VespaWebShop.Engine\VespaWebShop.Engine.csproj", "{5C07E470-B279-4233-80DC-FD2AA0A33C02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,22 @@ Global
 		{EEFC0F4D-06A7-4D71-910D-AC2305201823}.Release|x64.Build.0 = Release|Any CPU
 		{EEFC0F4D-06A7-4D71-910D-AC2305201823}.Release|x86.ActiveCfg = Release|Any CPU
 		{EEFC0F4D-06A7-4D71-910D-AC2305201823}.Release|x86.Build.0 = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|ARM.Build.0 = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|x64.Build.0 = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Debug|x86.Build.0 = Debug|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|ARM.ActiveCfg = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|ARM.Build.0 = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|x64.ActiveCfg = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|x64.Build.0 = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|x86.ActiveCfg = Release|Any CPU
+		{5C07E470-B279-4233-80DC-FD2AA0A33C02}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

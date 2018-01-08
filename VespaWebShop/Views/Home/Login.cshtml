@@ -1,0 +1,41 @@
+﻿@model VespaWebShop.Models.LoginViewModel
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @if(Model.Denied)
+        {
+            <span>Zugriff verweigert. Lade die Seite in einer Minute neu und versuche es nochmal.</span>
+        }
+        else
+        {
+            if (Model.Retry)
+            {
+                <span>Email oder Passwort falsch. Bitte versuche es nochmal.</span>
+            }
+
+            using (Html.BeginForm("ValidateLogin", "Home", FormMethod.Post))
+            {
+                @Html.Label("Email:")
+                @Html.EditorFor(m => m.Email)
+
+                @Html.Label("Passwort:")
+                @Html.EditorFor(m => m.Password)
+
+                @*@Html.ActionLink("Login", "ValidateLogin", this.Model, null)*@
+
+                <input type="submit" value="Login" class="btn btn-default" />
+            }
+        }
+       
+        
+    </div>
+</body>
+</html>

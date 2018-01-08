@@ -14,6 +14,8 @@ namespace VespaWebShop.Service.Migrations
 
         protected override void Seed(VespaWebShop.Service.ServiceContext context)
         {
+            context.Database.ExecuteSqlCommand("DELETE FROM dbo.Categories");
+
             //  This method will be called after migrating to the latest version.
             context.Categories.AddOrUpdate(new Models.Category() { Title = "Elektrik" });
             context.Categories.AddOrUpdate(new Models.Category() { Title = "Getriebe" });

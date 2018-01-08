@@ -167,17 +167,20 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Views\Home\Models\HomeViewModel.cs" />
-    <Compile Include="Views\Home\Models\LoginViewModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Views\Catalog\Models\CatalogViewModel.cs" />
+    <Compile Include="Views\Catalog\Models\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -198,6 +201,18 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Graphics\close.png" />
     <Content Include="Graphics\navIcon.png" />
+    <Content Include="Graphics\ProductPictures\Bremsen\BremseReinigungsset.jpg" />
+    <Content Include="Graphics\ProductPictures\Bremsen\Bremsklötze.jpg" />
+    <Content Include="Graphics\ProductPictures\Bremsen\BremseKomplett.jpg" />
+    <Content Include="Graphics\ProductPictures\Getriebe\Getriebe.jpg" />
+    <Content Include="Graphics\ProductPictures\Kupplung\KupplungKupfer.jpg" />
+    <Content Include="Graphics\ProductPictures\Kupplung\KupplungChrom.jpg" />
+    <Content Include="Graphics\ProductPictures\Kupplung\KupplungGesamt.jpg" />
+    <Content Include="Graphics\ProductPictures\noimage.jpg" />
+    <Content Include="Graphics\ProductPictures\product.jpg" />
+    <Content Include="Graphics\ProductPictures\Scheinwerfer\ScheinwerferVorne.jpg" />
+    <Content Include="Graphics\ProductPictures\Scheinwerfer\ScheinwerferHinten.jpg" />
+    <Content Include="Graphics\ProductPictures\Scheinwerfer\ScheinwerferXenon.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
@@ -228,15 +243,23 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Catalog\ProductView.cshtml" />
+    <Content Include="Views\Catalog\CatalogView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Home\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VespaWebShop.Engine\VespaWebShop.Engine.csproj">
+      <Project>{5C07E470-B279-4233-80DC-FD2AA0A33C02}</Project>
+      <Name>VespaWebShop.Engine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VespaWebShop.Service\VespaWebShop.Service.csproj">
       <Project>{eefc0f4d-06a7-4d71-910d-ac2305201823}</Project>
       <Name>VespaWebShop.Service</Name>

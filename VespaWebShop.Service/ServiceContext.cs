@@ -10,7 +10,7 @@ namespace VespaWebShop.Service
 {
     public class ServiceContext : DbContext
     {
-        public ServiceContext(): base("VespaWebShop")
+        public ServiceContext(): base("name=VespaShopConnectionString")
         {
 
         }

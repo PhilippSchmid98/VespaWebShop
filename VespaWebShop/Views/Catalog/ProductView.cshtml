@@ -1,0 +1,30 @@
+﻿@using VespaWebShop.Service
+
+@model VespaWebShop.Views.Catalog.Models.ProductViewModel
+
+@{
+    var catName = new ServiceContext().Categories.Where(c => c.Id == Model.Product.CategoryId).First().Title;
+    var path = $"../../Graphics/ProductPictures/{catName}/{Model.Product.Title}.jpg";
+    path = path.Replace(" ", "");
+}
+
+<div width="100%" style="height:150px; background-color:#edf3ff; margin:5px; padding: 5px; overflow: hidden">
+    <div class="Image" style="float:left; height:140px; width:140px; overflow: hidden;">
+        <img src="@path" class="productImage" style="height:140px;"/>
+    </div>
+    <div class="ProductDiscriptions" style="float:left; height:140px; width:calc(100% - 300px); padding: 5px;">
+        <h4><b>@Model.Product.Title</b></h4>
+        <div style="width:100%">
+            @Model.Product.Description
+        </div>
+    </div>
+    <div class="BuyingInfos" style="float:left; height:140px; width:150px; margin: 5px; margin-top: 7px; padding: 5px;">
+        <div style="float:left;">
+            CHF @Model.Product.Price
+        </div>
+        <div style="float:left;">
+            @Html.ActionLink("In den Warenkorb", "dummy", null, new { href = "#" })
+        </div>
+    </div>
+    
+</div>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using VespaWebShop.Service.Models;
 
-namespace VespaWebShop.ViewModels
+namespace VespaWebShop.Models
 {
     public class HomeViewModel
     {

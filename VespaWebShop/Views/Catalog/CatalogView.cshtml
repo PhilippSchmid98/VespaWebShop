@@ -1,0 +1,18 @@
+﻿@using VespaWebShop.Service
+@using VespaWebShop.Views.Catalog.Models
+
+@model VespaWebShop.Views.Catalog.Models.CatalogViewModel
+
+
+<h2>@Model.Category.Title</h2>
+
+@{
+    var products = new ServiceContext().Products.Where(p => p.CategoryId.Equals(Model.Category.Id)).ToList();
+
+    foreach(var product in products)
+    {
+        var vm = new ProductViewModel() { Product = product};
+        @Html.Partial("ProductView", vm);
+    }
+
+}

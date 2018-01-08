@@ -60,7 +60,11 @@ namespace VespaWebShop.Models
 
         [Display(Name = "Speichern?")]
         public bool RememberMe { get; set; }
-    }
+
+        public bool Denied { get; set; } = false;
+
+        public bool Retry { get; set; } = false;
+    } 
 
     public class RegisterViewModel
     {

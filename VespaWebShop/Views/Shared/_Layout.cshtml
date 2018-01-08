@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using VespaWebShop.Service
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -17,17 +19,15 @@
             <img src="~/Graphics/navIcon.png" id="CloseNav"/>
         </div>
         <ul class="sidebar-nav">
-            <li>@Html.ActionLink("Bremsen", "Index", "Home")</li>
-            <li>@Html.ActionLink("Elektrik", "Index", "Home")</li>
-            <li>@Html.ActionLink("Getriebe", "Index", "Home")</li>
-            <li>@Html.ActionLink("Kupplung", "Index", "Home")</li>
-            <li>@Html.ActionLink("Rahmen", "Index", "Home")</li>
-            <li>@Html.ActionLink("Scheinwerffer", "Index", "Home")</li>
-            <li>@Html.ActionLink("Seilzüge", "Index", "Home")</li>
-            <li>@Html.ActionLink("Stossdämpfer", "Index", "Home")</li>
-            <li>@Html.ActionLink("Vergaser", "Index", "Home")</li>
-            <li>@Html.ActionLink("Zündung", "Index", "Home")</li>
-            <li>@Html.ActionLink("Zylinder", "Index", "Home")</li>
+            @{
+                var Categories = new ServiceContext().Categories.ToList();
+
+                foreach (var cat in Categories)
+                {
+                    <li>@Html.ActionLink(cat.Title, "CatalogView", "Catalog", new { CategoryId = cat.Id }, null) </li>
+                }
+
+            }
         </ul>
     </div>
     <div id="content_blocker"></div>
@@ -38,19 +38,22 @@
 
 
         @if (Session["UserName"] == null)
-        {
-            @Html.ActionLink("Login", "Login", "Home", new { id = "login" })
+                    {
+                        @Html.ActionLink("Login", "Login", "Home", new { id = "login" })
         }
         else
         {
+
             @Html.ActionLink(Session["UserName"].ToString(), "UserSettings", "Home", new { id = "login" })
+            @Html.ActionLink("Logout", "Logout", "Home", new { id = "login" })
         }
 
 
 
     </div>
     <div id="page-content-wrapper" class="body-content">
-        
+
+
             @RenderBody()
             <hr />
             <footer>
@@ -60,9 +63,9 @@
     
 </div>
 
-                
-            
-    
+
+
+
     @*@Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)*@

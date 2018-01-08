@@ -50,9 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201711201244225_initial.cs" />
-    <Compile Include="Migrations\201711201244225_initial.Designer.cs">
-      <DependentUpon>201711201244225_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201712041831432_init.cs" />
+    <Compile Include="Migrations\201712041831432_init.Designer.cs">
+      <DependentUpon>201712041831432_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Basket.cs" />
@@ -72,7 +72,9 @@
     <Compile Include="ServiceContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,8 +85,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201711201244225_initial.resx">
-      <DependentUpon>201711201244225_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712041831432_init.resx">
+      <DependentUpon>201712041831432_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
